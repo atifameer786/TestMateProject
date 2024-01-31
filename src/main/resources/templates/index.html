@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date-Time Picker Example</title>
+    <style>
+        #datepicker {
+            font-size: 16px;
+            padding: 5px;
+        }
+        .calendar-icon {
+            display: inline-block;
+            margin-left: -25px;
+            margin-right: 5px;
+            width: 16px;
+            height: 16px;
+            background-image: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-calendar-512.png');
+            background-size: contain;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="text" id="datepicker" placeholder="Select Date-Time">
+    <span class="calendar-icon"></span>
+</div>
+
+<script>
+    function addDateTimePicker() {
+        const datePicker = document.getElementById('datepicker');
+        datePicker.type = 'datetime-local';
+    }
+
+    const calendarIcon = document.querySelector('.calendar-icon');
+    calendarIcon.addEventListener('click', addDateTimePicker);
+</script>
+</body>
+</html>
